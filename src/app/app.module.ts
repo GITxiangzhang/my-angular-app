@@ -12,7 +12,7 @@ import {OnChangeComponent} from "./onChange/on-change.component";
         AppComponent,
         MainComponent,
         LifecycleComponent,
-        OnChangeComponent
+        OnChangeComponent,
     ],
     imports: [
         BrowserModule,

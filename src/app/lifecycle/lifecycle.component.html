@@ -1,1 +1,6 @@
 <h1>{{name}}</h1>
+<li *ngFor="let item of list">
+    <span [style]="{color:item}"> {{item}}</span>
+</li>
+
+<button (click)="change()">change list</button>

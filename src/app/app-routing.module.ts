@@ -8,7 +8,7 @@ const routes: Routes = [
     {path: '', redirectTo: 'main', pathMatch: 'full'},
     {path: 'main', component: MainComponent},
     {path: 'lifecycle', component: LifecycleComponent},
-    {path: 'onChange', component: OnChangeComponent}
+    {path: 'onChange', component: OnChangeComponent},
 ];
 
 @NgModule({
