@@ -23,6 +23,9 @@ export class MainComponent {
     @ViewChild(ViewChildComponent)
     private childComponent!: ViewChildComponent;//非空断言
 
+
+    user: string = ''
+
     constructor() {
     }
 

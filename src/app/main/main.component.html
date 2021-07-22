@@ -579,12 +579,43 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<h1>父组件:{{name}}</h1>
+<h1>父子组件数据传递 demo</h1>
+<h3>父组件:{{name}}</h3>
 <setter-demo [name]="name" (inputChange)="inputChange($event)"></setter-demo>
 
+<br><br><br><br><br><br><br><br>
 
-<h3>ViewChild demo</h3>
+<h1>ViewChild demo</h1>
 <button (click)="start()">Start</button>
 <button (click)="stop()">Stop</button>
 <view-child-demo></view-child-demo>
+
+<br><br><br><br><br><br><br><br>
+
+
+<h1>双向数据绑定 demo</h1>
+<h3>父组件中user：{{user}}</h3>
+<my-input-demo [(value)]="user"></my-input-demo>
+
+<br><br><br><br><br><br><br><br>
+
+<h1>内容投影 demo</h1>
+<template-outlet-demo>
+    <my-input-demo [(value)]="user"></my-input-demo>
+</template-outlet-demo>
+
+<br><br><br><br><br><br><br><br>
+
+<h1>多个内容投影 demo</h1>
+<template-outlet-demo>
+    <my-input-demo [(value)]="user"></my-input-demo>
+    <div footer>footer 投影内容</div>
+</template-outlet-demo>
+
+<br><br><br><br><br><br><br><br>
+
+<h1>ngTemplateOutlet demo</h1>
+<template-outlet-demo [template]="header"></template-outlet-demo>
+<ng-template #header>
+    <a>这里是自定义header</a>
+</ng-template>

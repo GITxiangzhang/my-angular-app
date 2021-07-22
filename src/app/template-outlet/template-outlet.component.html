@@ -1,0 +1,22 @@
+<div>
+    <div class="header" *ngIf="template;else header">
+        <!--ngTemplateOutlet 指令来渲染给定的 传入ng-template 元素-->
+        <ng-container *ngTemplateOutlet="template"></ng-container>
+    </div>
+    <ng-template #header>
+        <div class="header">
+            默认的header
+        </div>
+    </ng-template>
+    <div class="content">
+        <label>content</label>
+        <!--使用ng-content 接收映射内容-->
+        <ng-content>
+        </ng-content>
+    </div>
+    <div class="footer">
+        <label>footer</label>
+        <!--使用ng-content select 属性实现多插槽内容投影-->
+        <ng-content select="[footer]"></ng-content>
+    </div>
+</div>
